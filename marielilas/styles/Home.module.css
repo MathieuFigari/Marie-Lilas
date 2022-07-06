@@ -107,15 +107,41 @@
     margin-left: 0px;
     resize: vertical;
     -moz-appearance: none;
+    -moz-appearance: textfield;
+}
+
+.inputArea::-webkit-outer-spin-button,
+.inputArea::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inputArea:focus{
+    outline: none;
+    background-color: #fcfaf2;
+}
+
+.inputArea:hover{
+    background-color: #fae9bfe3;
+    border: 1px solid #fae9bfe3;
 }
 
 .submit{
     background-color: #2c6e62;
   color: white;
+  width: 200px;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: 0.5s;
+  font-size: 1.1rem
+}
+
+.submit:hover{
+    background-color: #fcfaf2;
+    color: black;
+    font-size: 1.2rem;
 }
 
 .infosContact{
