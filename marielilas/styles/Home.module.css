@@ -1,116 +1,125 @@
-.container {
-  padding: 0 2rem;
-}
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700;900&display=swap');
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
+.theTitle{
+    color: #fcfaf2;
+    display: flex;
     flex-direction: column;
-  }
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(59,59,59,.4);
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(29, 29, 29, 0.7);
+    
+}
+
+
+.titre {
+   
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: normal;
+    font-family:Georgia, 'Times New Roman', Times, sans-serif;
+    font-weight: bolder;
+    font-size: 3.5rem;
+}
+
+.subtitle{
+    font-style: italic;
+}
+
+.containerPrequel{
+    background-image: url("../public/assets/homeBg.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+}
+
+.about{
+    background-color: #fcfaf2;
+}
+
+.containAbout{
+    display: flex;
+   width: 850px;
+   margin: auto;
+    padding: 3rem;
+    gap: 4rem;
+}
+
+.aboutTitle{
+    font-family: 'Kanit', sans-serif;
+    color: #c99669;
+}
+
+.aboutIntro{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.aboutMe{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.outro{
+    font-weight: bold;
+}
+
+.seePhotos{
+    font-weight: 400;
+    font-size: 0.9rem;
+    font-style: italic;
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: center;
+}
+
+.contact{
+    background-color: #e4ebe3;
+    padding: 2rem;
+}
+
+.titleContact{
+    font-family: 'Kanit', sans-serif;
+    color: #2c6e62;
+    text-align: center;
+}
+
+.inputArea {
+    width: 100%;
+    background-color: #fcfaf2;
+    padding: 12px;
+    border: 1px solid #fcfaf2;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+    resize: vertical;
+    -moz-appearance: none;
+}
+
+.submit{
+    background-color: #2c6e62;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.infosContact{
+    width: 850px;
+    margin: auto;
+    padding: 3rem;
 }
