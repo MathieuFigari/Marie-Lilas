@@ -35,6 +35,7 @@ import Link from 'next/link';
       </div>
       <div className={styles.marieLilaPhoto}>
       <Image
+      alt='marie lila portrait'
       src={marieLila}
       width="625" height="960"/>
       </div>

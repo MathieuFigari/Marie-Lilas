@@ -17,6 +17,7 @@ const router = useRouter()
     <nav className={styles.navbar}>
       <div className={styles.logo}>
     <Image
+    alt='logo marie lilas'
     src={logo}
     width="100" height="100"
     />
