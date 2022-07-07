@@ -5,7 +5,7 @@ min-height: 86vh;
 }
 
 .articlesTitle{
-    padding-top: 2rem;
+    padding-top: 1rem;
     text-align: center;
     text-transform: uppercase;
     color: #2c6e62;
@@ -32,7 +32,7 @@ min-height: 86vh;
 }
 
 .card{
-min-height: 50vh;
+min-height: 500px;
 width: 50%;
 height: 100%;
 background-size: cover;
@@ -53,7 +53,7 @@ background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 50vh;
+    min-height: 500px;
     width: 100%;
     background-color: rgba(59,59,59,.6);
     transition: 0.6s;
@@ -89,6 +89,39 @@ background: none;
     color: white;
     padding: 0.5rem;
     transition: 0.6s;
+}
+
+
+.articleHeader{
+    width: 100%;
+    min-height: 500px;
+    background-size: cover;
+background-position: 50% 50%;
+}
+
+.transparence{
+    min-height: 500px;
+    width: 100%;
+    background-color: rgba(59,59,59,.6);
+
+}
+
+.subtitleArt{
+    position: relative;
+    top: 120px;
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+
+}
+
+.articleDescription{
+    position: relative;
+    top: -150px;
+    max-width: 850px;
+    padding: 2rem;
+    margin: auto;
+    background-color: #fcfaf2;
 }
 
 @media (max-width: 650px) {

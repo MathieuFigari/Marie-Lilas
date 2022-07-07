@@ -4,7 +4,10 @@ import styles from '../styles/Home.module.css'
 import marieLila from '../public/assets/marielilas.jpg';
 import Link from 'next/link';
 
-export default function Home(props) {
+
+ export default function Home(props) {
+
+  
 
   return (
     <>
@@ -13,6 +16,7 @@ export default function Home(props) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Le site de la Voyante Marie Lilas</title>
     </Head>
+    <div className={styles.scrollContainer}>
     <section className={styles.containerPrequel}>
       <div className={styles.theTitle}>
         <h1 className={styles.titre} ><span>Marie-Lilas</span><span>Voyance</span><span>Cartomancie</span></h1>
@@ -29,12 +33,14 @@ export default function Home(props) {
         <div className={styles.outro}>Je reçois aussi à domicile bien sûr !! (Surgères en Charente Maritime)</div>
         <div className={styles.seePhotos}>Voir Photos</div>
       </div>
+      <div className={styles.marieLilaPhoto}>
       <Image
       src={marieLila}
       width="625" height="960"/>
       </div>
+      </div>
     </section>
-    <section className={styles.contact}>
+    <section id='scrollToContact' className={styles.contact}>
       <h2 className={styles.titleContact}>Contact</h2>
         <div className={styles.infosContact}>
           <div className={styles.adressInfos}> 
@@ -62,6 +68,7 @@ export default function Home(props) {
         </div>
 
     </section>
+    </div>
     </>
   );
 }

@@ -1,62 +1,70 @@
-import styles from '../../styles/Home.module.css'
+import styles from './Articles.module.css'
+import Head from 'next/head'
 import { v4 as uuidv4 } from 'uuid'
-import {useRouter} from 'next/router'
+import { database } from "../../config/firebase"
+import { collection, getDocs } from 'firebase/firestore'
 
 
 
 export default function article(props) {
 
-   const router = useRouter();
 
   return (
-    <div className='container'>
-        <h1 className={styles.titre} >{router.query.liste.charAt(0).toUpperCase() + router.query.liste.slice(1)}</h1>
-        <table className={styles.table}>
-          <tbody>
-            {
-              props.currentList.map(el => (
-                <tr key={uuidv4()}>
-                  <td >{el.en}</td>
-                  <td >{el.fr}</td>
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
+    <>
+    <Head>
+    <meta  content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marie-Lilas {props.currentArticle.title}</title>
+    </Head>
+    <div style={{backgroundImage: `url("/assets/${props.currentArticle.image}.jpg")`}} className={styles.articleHeader}>
+      <div className={styles.transparence}>
+        <h1 className={styles.subtitleArt}>{props.currentArticle.subtitle}</h1>
+      </div>
     </div>
+    <div className={styles.articleDescription}>
+        {
+          props.currentArticle.paraphs.map(paraph => (
+            <p key={uuidv4()} >{paraph}</p>
+          ))
+        }
+    </div>
+    </>
   )
 }
 
 
 export async function getStaticProps(context){
 
-    const mylist = context.params.liste
+    const myArticle = context.params.article;
+    const articles = collection(database, "articles");
+    const data = await getDocs(articles);
+    const myArticles = data.docs.map((doc) => ({...doc.data(), id: doc.id}))
 
-    const data = await import('/data/lists.json')
 
-    const currentList = data.englishList.find(list => list.name === mylist)
+    
+
+    const currentArticle = myArticles.find(article => article.title.split(' ').join('') === myArticle)
+
+    
 
     return{
         props: {
-            currentList: currentList.data
+            currentArticle: currentArticle
         }
     }
 }
 
 
 export async function getStaticPaths(){
-    const data = await import('/data/lists.json')
+  const articles = collection(database, "articles");
+  const data = await getDocs(articles);
+  const myArticles = data.docs.map((doc) => ({...doc.data(), id: doc.id}))
 
-    const paths = data.englishList.map(item => ({
-        params: {liste: item.name}
+    const paths = myArticles.map(article => ({
+        params: {article: article.title.split(' ').join('')}
     }))
 
     return {
-        // paths: [
-        //     {
-        //         params: { liste: "words"}
-        //     }
-        // ],
         paths,
         fallback: false
     }

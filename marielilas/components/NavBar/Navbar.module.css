@@ -26,3 +26,27 @@
     font-size: 1rem;
     font-weight: 350;
 }
+
+@media (max-width: 500px) {
+    .logo{
+        display: none;
+    }
+    .header{
+        height: 45px;
+    }
+ }
+
+
+ @media (max-width: 360px) {
+ .navbar{
+    gap: 3rem;
+ }
+ }
+
+ @media (max-width: 300px) {
+    .navbar{
+       gap: 2rem;
+    }
+    }
+
+

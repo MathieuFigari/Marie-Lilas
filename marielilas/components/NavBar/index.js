@@ -11,14 +11,15 @@ export default function NavBar() {
       <div className={styles.siteHeader}>
     
     <nav className={styles.navbar}>
+      <div className={styles.logo}>
     <Image
-     
     src={logo}
     width="100" height="100"
     />
+    </div>
       <Link href="/"><a>Accueil</a></Link>
       <Link href="/Articles"><a>Articles</a></Link>
-      <Link href="/"><a>Contact</a></Link>
+      <Link href="/#scrollToContact"><a>Contact</a></Link>
     </nav>
     </div>
     </header>
