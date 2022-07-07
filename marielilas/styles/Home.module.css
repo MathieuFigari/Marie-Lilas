@@ -138,6 +138,16 @@
   font-size: 1.1rem
 }
 
+.adressInfos{
+    margin: auto;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.email{
+    margin-bottom: 0;
+}
+
 .submit:hover{
     background-color: #fcfaf2;
     color: black;
@@ -146,6 +156,21 @@
 
 .infosContact{
     width: 850px;
-    margin: auto;
     padding: 3rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
+
+.subtitContact{
+    color: #2c6e62;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+@media (max-width: 650px) {
+    .card{
+        width: 100%;
+    }
+ }

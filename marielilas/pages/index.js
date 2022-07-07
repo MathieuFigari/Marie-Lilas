@@ -2,10 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import marieLila from '../public/assets/marielilas.jpg';
+import Link from 'next/link';
 
 export default function Home(props) {
-
-console.log(props)
 
   return (
     <>
@@ -38,8 +37,16 @@ console.log(props)
     <section className={styles.contact}>
       <h2 className={styles.titleContact}>Contact</h2>
         <div className={styles.infosContact}>
+          <div className={styles.adressInfos}> 
+          <h3 className={styles.subtitContact}>Marie-Lilas-Voyance</h3>
+            <address> 7 Rue Olivier Brillouet <br/> 17700 Surgères</address>
+            <address> <p className={styles.email}>marie-lilas@hotmail.fr</p>
+            <Link href="tel:+33681243124"><a>06 81 24 31 24</a></Link>
+            </address>
+            </div> 
 
-        <form >
+
+        <form className={styles.formContact}>
         
     <input className={styles.inputArea} type="text" id={styles.fname} name="firstname" placeholder="Votre nom et prénom"></input>
 

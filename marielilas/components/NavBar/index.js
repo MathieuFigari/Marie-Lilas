@@ -17,7 +17,7 @@ export default function NavBar() {
     width="100" height="100"
     />
       <Link href="/"><a>Accueil</a></Link>
-      <Link href="/cours"><a>Articles</a></Link>
+      <Link href="/Articles"><a>Articles</a></Link>
       <Link href="/"><a>Contact</a></Link>
     </nav>
     </div>
