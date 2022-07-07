@@ -33,7 +33,7 @@
 }
 
 .containerPrequel{
-    background-image: url("../public/assets/homeBg.jpg");
+    background-image: url("/assets/homeBg.jpg");
     background-size: cover;
     background-position: 50% 50%;
     min-height: 60vh;
