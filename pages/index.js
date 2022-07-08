@@ -5,8 +5,9 @@ import marieLila from '../public/assets/marielilas.jpg';
 import Link from 'next/link';
 import Slider from "../components/Slider"
 import React, { useState } from 'react';
-import emailjs from "emailjs-com";
-import Script from "next/script"
+import emailjs from "@emailjs/browser"
+import Script from 'next/script';
+
 
 
  export default function Home() {
@@ -40,19 +41,19 @@ import Script from "next/script"
 
   return (
     <>
-    <Head>
-    <meta  content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Le site de la Voyante Marie Lilas</title>
-    </Head>
-    <Script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></Script>
-                  <Script type="text/javascript">
+    <Script id="script-EmailJs" type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></Script>
+                  <Script id="emailjs-func" type="text/javascript">
                     {
                       (function() {
                 emailjs.init("user_gSMIoHR0ZYwbPcTrh5jsH")
               })()
             }
         </Script>
+    <Head>
+    <meta  content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le site de la Voyante Marie Lilas</title>
+    </Head>
     <div className={styles.scrollContainer}>
       <div onClick={closeModale} className={divMasq}></div>
     <section className={styles.containerPrequel}>
