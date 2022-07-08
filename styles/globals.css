@@ -56,10 +56,17 @@ text-align: center;
     }
 
    .slide a {
-        opacity: 0;
-        position: relative;
+        
         text-decoration: none;
         transition: opacity 0.5s;
+        border-color: #FFF #FFF transparent transparent;
+            color: #FFF;
+            display: block;
+            height: 10px;
+            position: absolute;
+            top: calc(0% - 5px);
+            width: 10px;
+            z-index: 10;
 
    }
    .slide a:after {
@@ -183,18 +190,3 @@ text-align: center;
 }
 
 
-@keyframes lds-circle {
-  0%, 100% {
-    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
-  }
-  0% {
-    transform: rotateY(0deg);
-  }
-  50% {
-    transform: rotateY(1800deg);
-    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
-  }
-  100% {
-    transform: rotateY(3600deg);
-  }
-}

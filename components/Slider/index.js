@@ -8,37 +8,58 @@ export default function Slider() {
 		<div id="slide-1" className="slide">
 			<a href="#slide-7"></a>
 			<a href="#slide-2"></a>
-			<Image src="https://c1.staticflickr.com/9/8724/16310801553_cea90ae63d_n.jpg" />
+			<Image
+            layout='fill' objectFit='cover'
+            width="1920" height="1280"
+            src="/assets/slid1.jpg" />
 		</div>
 		<div id="slide-2" className="slide">
 			<a href="#slide-1"></a>
 			<a href="#slide-3"></a>
-			<Image src="https://c2.staticflickr.com/4/3719/19819674272_2384feaaf8_n.jpg" />
+			<Image
+            layout='fill' objectFit='cover'
+            width="1920" height="1920" 
+            src="/assets/slid2.jpg" />
 		</div>
 		<div id="slide-3" className="slide">
 			<a href="#slide-2"></a>
 			<a href="#slide-4"></a>
-			<Image src="https://c2.staticflickr.com/2/1627/24319275501_3ec6f36fa7_n.jpg" />
+			<Image
+            layout='fill' objectFit='cover'
+            width="1920" height="1285" 
+            src="/assets/slid3.jpg" />
 		</div>
 		<div id="slide-4" className="slide">
 			<a href="#slide-3"></a>
 			<a href="#slide-5"></a>
-			<Image src="https://c2.staticflickr.com/2/1460/25194537936_e3c54faefc_n.jpg" />
+			<Image
+            layout='fill' objectFit='cover'
+            width="1920" height="1281" 
+            src="/assets/slid4.jpg" />
 		</div>
 		<div id="slide-5" className="slide">
 			<a href="#slide-4"></a>
 			<a href="#slide-6"></a>
-			<Image src="https://c2.staticflickr.com/2/1460/26216238325_9c425923a7_n.jpg" />
+			<Image
+            layout='fill' objectFit='cover'
+            width="1280" height="800" 
+            src="/assets/slid5.jpg" />
 		</div>
 		<div id="slide-6" className="slide">
 			<a href="#slide-5"></a>
 			<a href="#slide-7"></a>
-			<Image src="https://c2.staticflickr.com/8/7578/26194232483_8204bf119b_n.jpg" />
+			<Image
+            layout='fill' objectFit='cover'
+            width="1920" height="1280" 
+            src="/assets/slid6.jpg" />
 		</div>
 		<div id="slide-7" className="slide">
 			<a href="#slide-6"></a>
 			<a href="#slide-1"></a>
-			<Image src="https://c2.staticflickr.com/8/7106/26862741906_d5283c42ba_n.jpg" />
+			<Image
+            layout='fill' objectFit='cover'
+            width="1920" height="1280" 
+            src="/assets/slid7.jpg" />
 		</div>
 	</div>
   <div className="pagination">
