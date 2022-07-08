@@ -4,6 +4,7 @@ import { database } from "../../config/firebase"
 import Link from "next/link"
 import { collection, getDocs } from 'firebase/firestore'
 import React from "react";
+import Spinner from "../../components/Spinner"
 
 
 
@@ -16,13 +17,18 @@ export default function Articles(props) {
   }, []);
 
   return (
+<>
+
+    { 
+
+    !props.myArticles ? <Spinner /> :
+
     <>
     <Head>
     <meta  content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Le site de la Voyante Marie Lilas</title>
     </Head>
-    
     <section className={styles.articles}>
       <h1 id="Articles" className={styles.articlesTitle}><span className={styles.spanH1}>Les</span><br/>Articles</h1>
       <div className={styles.artContainer}>
@@ -45,6 +51,10 @@ export default function Articles(props) {
 }
       </div>
     </section>
+    </>
+
+}
+
     </>
   )
 }

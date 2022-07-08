@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { v4 as uuidv4 } from 'uuid'
 import { database } from "../../config/firebase"
 import { collection, getDocs } from 'firebase/firestore'
+import Spinner from "../../components/Spinner"
 
 
 
@@ -11,6 +12,12 @@ export default function article(props) {
 
   return (
     <>
+      {
+
+        !props.currentArticle  ? <Spinner /> :
+
+
+<>
     <Head>
     <meta  content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,6 +35,9 @@ export default function article(props) {
           ))
         }
     </div>
+    </>
+      }
+
     </>
   )
 }
