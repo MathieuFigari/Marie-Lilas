@@ -44,7 +44,8 @@ import Script from "next/script"
     <meta  content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Le site de la Voyante Marie Lilas</title>
-              <Script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></Script>
+    </Head>
+    <Script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></Script>
                   <Script type="text/javascript">
                     {
                       (function() {
@@ -52,7 +53,6 @@ import Script from "next/script"
               })()
             }
         </Script>
-    </Head>
     <div className={styles.scrollContainer}>
       <div onClick={closeModale} className={divMasq}></div>
     <section className={styles.containerPrequel}>
