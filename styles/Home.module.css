@@ -51,6 +51,7 @@
    margin: auto;
     padding: 3rem;
     gap: 4rem;
+    position: relative;
 }
 
 .aboutTitle{
@@ -178,6 +179,11 @@
 .scrollContainer{
     overflow-y: scroll;
   scroll-behavior: smooth;
+}
+
+.phoneNum{
+    color: blue;
+    text-decoration: underline;
 }
 
 @media (max-width: 900px) {

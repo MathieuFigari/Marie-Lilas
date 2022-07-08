@@ -29,7 +29,6 @@ export default function Articles(props) {
         {
         
        props.myArticles.map(art => (
-
         <Link  key={art.id} className={styles.basis} href={`/Articles/${art.title.split(' ').join('')}`}>
         <div style={{backgroundImage: `url("/assets/${art.image}.jpg")`}} className={styles["card"]} >
           <div className={styles.test}>
