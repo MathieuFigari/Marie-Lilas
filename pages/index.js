@@ -10,7 +10,12 @@ import Script from 'next/script';
 
 
 
- export default function Home() {
+ export default function Home(props) {
+  
+const reviews = props.reviews.result.reviews
+
+console.log()
+
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -84,6 +89,36 @@ import Script from 'next/script';
       </div>
       </div>
     </section>
+    <section className={styles.reviews}>
+      <h2 className={styles.reviews_title}>Les Avis</h2>
+      <div className={styles.reviews}>
+          {
+              reviews.map(rev => (
+
+                <div className={styles.review}>
+            <h3 className={styles.author}>{rev.author_name}</h3>
+            <div className={styles.rating}>
+              <span   style={{backgroundImage: `url("/assets/startgrey.png")`}} className={styles.stars}>
+                 <span style={{backgroundImage: `url("/assets/starOr.png")`, width: `${14*rev.rating}px`}} className={styles.goodRating}></span>     
+              </span>
+              <div className={styles.comment}>
+                {rev.text}
+              </div>
+            </div>
+        </div>
+
+
+              ) )
+
+          }
+
+      </div>
+
+          <Link  href="https://www.google.com/maps/place/marie-lilas+voyance/@46.1106532,-0.7493936,15z/data=!4m7!3m6!1s0x0:0x600bb945b79630c5!8m2!3d46.1106532!4d-0.7493936!9m1!1b1"><a target="_blank"><div className={styles.googleBtn}>Plus d'Avis</div></a></Link> 
+      
+
+    </section>
+
     <section id='scrollToContact' className={styles.contact}>
       <h2 className={styles.titleContact}>Contact</h2>
         <div className={styles.infosContact}>
@@ -119,28 +154,13 @@ import Script from 'next/script';
 
 
 export async function getStaticProps(){
-  const data = await import(`/data/vocabulary.json`)
-  const array = data.vocabulary;
+  const data = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJrfDopaQxB0gRxTCWt0W5C2A&fields=reviews&language=fr&key=AIzaSyCt2EVIy_OJAhCO3_QaJxGZTLd_EB4sqGU`)
+  const reviews = await data.json();
 
-
-/*  if (array.length === 0){
-    return {
-      notFound: true
-    }
-  } */
-
-
-  if (array.length === 0){
-    return {
-      redirect: {
-        destination: "/isr"
-      }
-    }
-  }
 
   return{
     props: {
-      array
+      reviews
     }
   }
 }

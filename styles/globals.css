@@ -175,6 +175,22 @@ text-align: center;
   animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 
+.HistoireBranchée{
+  order: 1;
+}
+
+.CadeauduCiel{
+  order: 2;
+}
+
+.SequenceEmotion{
+  order: 3;
+}
+
+.HistoiresCourtes{
+  order: 4;
+}
+
 
 @media (max-width: 800px) {
   .containerSlide{

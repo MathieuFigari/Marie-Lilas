@@ -145,6 +145,22 @@
   font-size: 1.1rem;
 }
 
+
+.googleBtn{
+    background-color: #af985b;
+    color: white;
+    width: 200px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 1.1rem;   
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem auto;
+}
+
 .adressInfos{
     margin: auto;
     text-align: center;
@@ -184,6 +200,39 @@
 .phoneNum{
     color: blue;
     text-decoration: underline;
+}
+
+
+.stars{
+    background-repeat: repeat-x;
+    width: 70px;
+    height: 13px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.goodRating{
+    background-repeat: repeat-x;
+    display: inline-block;
+    height: 17px;
+}
+
+.reviews_title{
+    color: #af985b;
+    text-align: center;
+}
+
+.author{
+    margin-bottom: 0;
+    color: #746b52;
+}
+
+.review{
+    width: 95%;
+    margin: auto;
+    max-width: 800px;
+    margin-bottom: 4rem;
 }
 
 @media (max-width: 900px) {
