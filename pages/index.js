@@ -95,7 +95,7 @@ console.log()
           {
               reviews.map(rev => (
 
-                <div className={styles.review}>
+                <div key={rev.time} className={styles.review}>
             <h3 className={styles.author}>{rev.author_name}</h3>
             <div className={styles.rating}>
               <span   style={{backgroundImage: `url("/assets/startgrey.png")`}} className={styles.stars}>
