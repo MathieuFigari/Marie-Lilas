@@ -205,4 +205,18 @@ text-align: center;
   }
 }
 
+@media (max-height: 500px) {
+   .containerSlide{
+    top: 0;
+    z-index: 15;
+    height: 95vh;
+   }
+
+   .divMasq{
+    z-index: 15;
+   }
+}
+
+
+
 

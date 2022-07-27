@@ -12,9 +12,12 @@ import Script from 'next/script';
 
  export default function Home(props) {
   
+ 
 const reviews = props.reviews.result.reviews
+const reviewOne = reviews[0] 
+const reviewsFiltred = reviews.filter((item) =>  item !== reviewOne )
 
-console.log()
+
 
 
   const sendEmail = (e) => {
@@ -33,6 +36,12 @@ console.log()
   }
 
   const [modaleOpen, setOpenModale] = useState(false)
+  const [accOpen, setAccOpen] = useState(false)
+
+
+  const accClassName = accOpen ? "open" : "review";
+  const reviewClass = accOpen ? "active" : "";
+  const viewmore = accOpen ? "Afficher Moins" : "Afficher Plus"
 
   const divMasq = modaleOpen ? "divMasq" : "nonvisible"
 
@@ -92,10 +101,25 @@ console.log()
     <section className={styles.reviews}>
       <h2 className={styles.reviews_title}>Les Avis</h2>
       <div className={styles.reviews}>
-          {
-              reviews.map(rev => (
 
-                <div key={rev.time} className={styles.review}>
+      <div onClick={() => setAccOpen(!accOpen)} key={reviewOne.time} className={`${styles.reviewOne} ${styles[reviewClass]}`}>
+            <h3 className={styles.author}>{reviewOne.author_name}</h3>
+            <div className={styles.rating}>
+              <span   style={{backgroundImage: `url("/assets/startgrey.png")`}} className={styles.stars}>
+                 <span style={{backgroundImage: `url("/assets/starOr.png")`, width: `${14*reviewOne.rating}px`}} className={styles.goodRating}></span>     
+              </span>
+              <div className={styles.comment}>
+                {reviewOne.text}
+              </div>
+              <div className={styles.reviewPlus}>{viewmore}</div>
+            </div>
+            </div>
+
+
+          {
+              reviewsFiltred.map(rev => (
+
+                <div key={rev.time} className={styles[accClassName]}>
             <h3 className={styles.author}>{rev.author_name}</h3>
             <div className={styles.rating}>
               <span   style={{backgroundImage: `url("/assets/startgrey.png")`}} className={styles.stars}>
@@ -111,8 +135,8 @@ console.log()
               ) )
 
           }
-
-      </div>
+</div>
+      
 
           <Link  href="https://www.google.com/maps/place/marie-lilas+voyance/@46.1106532,-0.7493936,15z/data=!4m7!3m6!1s0x0:0x600bb945b79630c5!8m2!3d46.1106532!4d-0.7493936!9m1!1b1"><a target="_blank"><div className={styles.googleBtn}>Plus d'Avis</div></a></Link> 
       
