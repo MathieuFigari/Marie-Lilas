@@ -161,6 +161,13 @@
     margin: 2rem auto;
 }
 
+.googleBtn:hover{
+    background-color: #fcfaf2;
+    border: 1px solid #af985b;
+    color: #746b52;
+    font-size: 1.2rem;
+}
+
 .adressInfos{
     margin: auto;
     text-align: center;
@@ -232,9 +239,7 @@
     width: 95%;
     margin: auto;
     max-width: 800px;
-    max-height: 0;
-    overflow: hidden;
-   transition: all 0.2s;
+
 }
 
 .reviewOne{
@@ -264,6 +269,12 @@
     margin-top: 0.5rem;
     text-decoration: underline;
     font-style: italic;
+}
+
+.close{
+    max-height: 0;
+    overflow-y: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 .open{

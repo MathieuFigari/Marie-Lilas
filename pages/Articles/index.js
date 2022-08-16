@@ -27,7 +27,7 @@ export default function Articles(props) {
     <Head>
     <meta  content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Le site de la Voyante Marie Lilas</title>
+    <title>Le Blog de Marie Lilas Voyance</title>
     </Head>
     <section className={styles.articles}>
       <h1 id="Articles" className={styles.articlesTitle}><span className={styles.spanH1}>Les</span><br/>Articles</h1>

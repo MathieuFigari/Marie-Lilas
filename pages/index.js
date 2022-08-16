@@ -39,7 +39,7 @@ const reviewsFiltred = reviews.filter((item) =>  item !== reviewOne )
   const [accOpen, setAccOpen] = useState(false)
 
 
-  const accClassName = accOpen ? "open" : "review";
+  const accClassName = accOpen ? "open" : "close";
   const reviewClass = accOpen ? "active" : "";
   const viewmore = accOpen ? "Afficher Moins" : "Afficher Plus"
 
@@ -66,7 +66,11 @@ const reviewsFiltred = reviews.filter((item) =>  item !== reviewOne )
     <Head>
     <meta  content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Le site de la Voyante Marie Lilas</title>
+    <title>Marie Lilas Voyance</title>
+    <meta name="author" content="Mathieu Figari"/>
+    <meta name="keywords" content="Voyante voyance Surgère Charente Maritime Niort cartomancie Médium Tarot"/>
+    <meta name="description" content="Bienvenue sur le Site de la Voyante Marie Lilas , Spécialisée dans la cartomancie, prédiction je vous apporte des réponses sur votre avenir je peux consulter par téléphone ou à mon domicile à Surgère en Charente Maritime"/>
+    <meta property="og:type" content="Site Vitrine"/>
     </Head>
     <div className={styles.scrollContainer}>
       <div onClick={closeModale} className={divMasq}></div>
@@ -115,11 +119,11 @@ const reviewsFiltred = reviews.filter((item) =>  item !== reviewOne )
             </div>
             </div>
 
-
+      <div className={styles[`${accClassName}`]}>
           {
               reviewsFiltred.map(rev => (
 
-                <div key={rev.time} className={styles[accClassName]}>
+                <div key={rev.time} className={styles.review}>
             <h3 className={styles.author}>{rev.author_name}</h3>
             <div className={styles.rating}>
               <span   style={{backgroundImage: `url("/assets/startgrey.png")`}} className={styles.stars}>
@@ -135,6 +139,7 @@ const reviewsFiltred = reviews.filter((item) =>  item !== reviewOne )
               ) )
 
           }
+          </div>
 </div>
       
 
