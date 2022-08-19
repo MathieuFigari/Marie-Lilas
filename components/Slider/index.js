@@ -11,7 +11,7 @@ export default function Slider() {
 			<Image
             layout='fill' objectFit='cover'
             width="1920" height="1280"
-            src="/assets/slid1.jpg" />
+            src="/assets/slid1.jpeg" />
 		</div>
 		<div id="slide-2" className="slide">
 			<a href="#slide-1"></a>
@@ -19,7 +19,7 @@ export default function Slider() {
 			<Image
             layout='fill' objectFit='cover'
             width="1920" height="1920" 
-            src="/assets/slid2.jpg" />
+            src="/assets/slid2.jpeg" />
 		</div>
 		<div id="slide-3" className="slide">
 			<a href="#slide-2"></a>
@@ -27,7 +27,7 @@ export default function Slider() {
 			<Image
             layout='fill' objectFit='cover'
             width="1920" height="1285" 
-            src="/assets/slid3.jpg" />
+            src="/assets/slid3.jpeg" />
 		</div>
 		<div id="slide-4" className="slide">
 			<a href="#slide-3"></a>
@@ -35,7 +35,7 @@ export default function Slider() {
 			<Image
             layout='fill' objectFit='cover'
             width="1920" height="1281" 
-            src="/assets/slid4.jpg" />
+            src="/assets/slid4.jpeg" />
 		</div>
 		<div id="slide-5" className="slide">
 			<a href="#slide-4"></a>
@@ -43,7 +43,7 @@ export default function Slider() {
 			<Image
             layout='fill' objectFit='cover'
             width="1280" height="800" 
-            src="/assets/slid5.jpg" />
+            src="/assets/slid5.jpeg" />
 		</div>
 		<div id="slide-6" className="slide">
 			<a href="#slide-5"></a>
@@ -59,7 +59,7 @@ export default function Slider() {
 			<Image
             layout='fill' objectFit='cover'
             width="1920" height="1280" 
-            src="/assets/slid7.jpg" />
+            src="/assets/slid7.jpeg" />
 		</div>
 	</div>
   <div className="pagination">
