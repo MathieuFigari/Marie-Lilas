@@ -10,7 +10,7 @@ export default function Slider() {
 			<a href="#slide-2"></a>
 			<Image
             layout='fill' objectFit='cover'
-            width="1920" height="1280"
+            width="768" height="1024"
             src="/assets/slid1.jpeg" />
 		</div>
 		<div id="slide-2" className="slide">
@@ -18,7 +18,7 @@ export default function Slider() {
 			<a href="#slide-3"></a>
 			<Image
             layout='fill' objectFit='cover'
-            width="1920" height="1920" 
+            width="375" height="812" 
             src="/assets/slid2.jpeg" />
 		</div>
 		<div id="slide-3" className="slide">
@@ -26,7 +26,7 @@ export default function Slider() {
 			<a href="#slide-4"></a>
 			<Image
             layout='fill' objectFit='cover'
-            width="1920" height="1285" 
+            width="768" height="1024" 
             src="/assets/slid3.jpeg" />
 		</div>
 		<div id="slide-4" className="slide">
@@ -34,7 +34,7 @@ export default function Slider() {
 			<a href="#slide-5"></a>
 			<Image
             layout='fill' objectFit='cover'
-            width="1920" height="1281" 
+            width="768" height="1024" 
             src="/assets/slid4.jpeg" />
 		</div>
 		<div id="slide-5" className="slide">
@@ -42,7 +42,7 @@ export default function Slider() {
 			<a href="#slide-6"></a>
 			<Image
             layout='fill' objectFit='cover'
-            width="1280" height="800" 
+            width="375" height="812" 
             src="/assets/slid5.jpeg" />
 		</div>
 		<div id="slide-6" className="slide">
@@ -58,7 +58,7 @@ export default function Slider() {
 			<a href="#slide-1"></a>
 			<Image
             layout='fill' objectFit='cover'
-            width="1920" height="1280" 
+            width="768" height="1024" 
             src="/assets/slid7.jpeg" />
 		</div>
 	</div>
